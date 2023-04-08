@@ -1,0 +1,26 @@
+{
+  "name": "magic-mirror-module-googlefit",
+  "version": "1.0.0",
+  "description": "Linux Sytem Information module for the Magic Mirror.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fry0815/MMM-GoogleFit"
+  },
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "google fit"
+  ],
+  "author": "Andrew McOlash",
+  "contributors": [
+    "https://github.com/amcolash/MMM-GoogleFit/graphs/contributors"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fry0815/MMM-GoogleFit/issues"
+  },
+  "homepage": "https://github.com/fry0815/MMM-GoogleFit#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
