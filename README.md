@@ -21,7 +21,7 @@ This module is pretty simple to set up. You simply need to clone the module into
 
 ```
 $ cd MagicMirror/modules
-$ git clone https://github.com/amcolash/MMM-GoogleFit.git
+$ git clone https://github.com/fry0815/MMM-GoogleFit.git
 ```
 
  Then add the following to `MagicMirror/config/config.js` and optionally configure any options [below](#configuration-options).
