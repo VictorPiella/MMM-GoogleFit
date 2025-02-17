@@ -5,6 +5,7 @@ Module.register("MMM-GoogleFit", {
   auth: undefined,
   code: undefined,
   error: undefined,
+  title: undefined,
   defaults: {
     updateInterval: 30, // minutes
     stepGoal: 10000,
@@ -47,7 +48,7 @@ Module.register("MMM-GoogleFit", {
     wrapper.className = "dimmed small";
 
     var title =  document.createElement("header");
-    title.innerHTML = "Google Fit";
+    title.innerHTML = this.config.title || "Google Fit";
     wrapper.appendChild(title);
 
     if (this.stats) {
@@ -268,21 +269,21 @@ Module.register("MMM-GoogleFit", {
         var label = document.createElement("div");
         label.style.cssText = "float: left; width: " + totalSize + "px; font-size: " + this.config.fontSize + "px; text-align: center;";
         label.innerHTML = days[i];
-		
+
         if (this.config.stepCountLabel && steps[i] > 0) {
           if (this.config.showRealSteps) {
             var s = steps[i];
           }
           else {
             var s = steps[i] / 1000;
-          }          
+          }
           s = Number(s).toFixed(s < 10 ? 1 : 0);
           if (this.config.showRealSteps) {
             label.innerHTML += "<br>" + s;
           }
           else {
             label.innerHTML += "<br>" + s + "k";
-          }          
+          }
         }
         if (weights[i]) {
           label.innerHTML += "<br>" + weights[i];

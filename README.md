@@ -1,8 +1,6 @@
 # MMM-GoogleFit
 A magic mirror module to grab google fit daily step count and daily weights.
 
-# This module is not maintained and will not recieve any support from me.
-
 ## What it Looks Like
 Normal Usage:<br>
 ![Normal use screenshot](https://raw.githubusercontent.com/amcolash/MMM-GoogleFit/master/screenshots/normal.png)
@@ -58,31 +56,32 @@ Note; If you want to use metric/imperial units for weights (or if they are not w
 | displayWeight  | If the module should show weight data. <br> <b>Possible values</b>: <code>boolean</code><br>Default value</b>: `true`                                                          |
 | chartWidth     | How wide the chart portion of the module should be (in pixels), excludes icons <br> <b>Possible values</b>: <code>number</code> <br> <b>Default value</b>: 300                                                                               |
 | chartPadding   | Percent of available chart width dedicated to padding. If each ring takes 50px and there is 0.2 (percent) padding, then 10px are used for padding, making the chart 40px. <br> <b>Possible values</b>: <code>number (between 0 - 1)</code> <br> <b>Default value</b>: 0.2                                                                               |
-| innerThickness | How thick inside gap of the chart rings should be (percent), where 0 = no innner gap and 1 = only gap, no visible chart. <br> <b>Possible values</b>: <code>number (between 0 - 1)</code> <br> <b>Default value</b>: 0.8                                                                               | 
+| innerThickness | How thick inside gap of the chart rings should be (percent), where 0 = no innner gap and 1 = only gap, no visible chart. <br> <b>Possible values</b>: <code>number (between 0 - 1)</code> <br> <b>Default value</b>: 0.8                                                                               |
 | fontSize       | Font size <br> <b>Possible values</b>: <code>number</code> <br> <b>Default value</b>: 18                                                                                                                 |
 | stepCountLabel | Enable step count to be listed below the step rings <br> <b>Possible values</b>: <code>boolean</code> <br> <b>Default value</b>: <code>false</code>                                                                                   |
 | useIcons       | Enable icons on the side of the module <br> <b>Possible values</b>: <code>boolean</code> <br> <b>Default value</b>: <code>true</code>                                                                                   |
 | colors         | Array of colors for the step counter <br> <b>Possible values</b>: <code>Array[#hexColor]</code> <br> <b>Default value</b>: <code>["#EEEEEE", "#1E88E5", "#9CCC65", "#5E35B1", "#FFB300", "#F4511E"]</code> |
-| debug          | Turn on debug mode? <br> <b>Possible values</b>: <code>boolean</code> <br> <b>Default value</b>: <code>false</code>                                                                                   |
+| debug          | Turn on debug mode? <br> <b>Possible values</b>: <code>boolean</code> <br> <b>Default value</b>: <code>false</code>
+| title          | Custom text for title <br> <b>Possible values</b>: <code>string</code> <br> <b>Default value</b>: <code>Google Fit</code>                                                                            |
 
 Example of ``config.js``:
 ```
 {
-	module: 'MMM-GoogleFit',
-	position: 'top_right',
-	config: {
-		startOnMonday: true,
-		stepCountLabel: true,
-		showRealSteps: true,
-		displayDays: ["L", "M", "X", "J", "V", "S", "D"],
-		updateInterval: 15,
-		colors: ["#EEEEEE", "#1E88E5", "#9CCC65", "#5E35B1", "#FFB300", "#F4511E"],
-		displayWeight: true,
-		}
+  module: 'MMM-GoogleFit',
+  position: 'top_right',
+  config: {
+    startOnMonday: true,
+    stepCountLabel: true,
+    showRealSteps: true,
+    displayDays: ["L", "M", "X", "J", "V", "S", "D"],
+    updateInterval: 15,
+    colors: ["#EEEEEE", "#1E88E5", "#9CCC65", "#5E35B1", "#FFB300", "#F4511E"],
+    displayWeight: true,
+    }
 },
 ```
 Those settings will display the module as follows:
- 
+
 ![Example featuring day label change](https://raw.githubusercontent.com/ferferga/MMM-GoogleFit/master/screenshots/RealSteps_and_DayLabels.png)
 
 
